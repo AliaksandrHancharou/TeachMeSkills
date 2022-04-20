@@ -14,7 +14,7 @@
 #   №1
 some_words = list(map(str, input().split()))
 some_words[0], some_words[1] = some_words[1], some_words[0]
-delimiter = ' ! '
+delimiter = '!'
 print(f'!{some_words[0]} {delimiter} {some_words[1]}!')
 
 #   №2
