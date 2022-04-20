@@ -1,14 +1,21 @@
-# palindrome_tuple = ('дед', 'морковь', 'яблоко', 'пейзаж', 'потоп', 'топот', 'рябина', 'шалаш')
+palindrome_tuple = ('дед', 'морковь', 'яблоко', 'пейзаж', 'потоп', 'топот', 'рябина', 'шалаш')
 
-# def palindrome(words: tuple) -> tuple:
-#     if words == words[::-1]:
-#         return True
-#     else:
-#         return False
+#   1
+def palindrome_v1(words: tuple) -> tuple:
+    if words == words[::-1]:
+        return True
+    else:
+        return False
+    
+palindrome_filter = filter(palindrome_v1, palindrome_tuple)
 
-# palindrome_filter = filter(palindrome, palindrome_tuple)
+print(list(palindrome_filter))
 
-# print(list(palindrome_filter))
+#   2
+def palindrome_v2(words: tuple) -> tuple:
+    return list(filter(lambda x: x == x[::-1], words))
+
+print(palindrome_v2(palindrome_tuple))
 
 
 #   №1
